@@ -16,8 +16,8 @@
             scroll-behavior: smooth;
         }
         body {
-            background: #121212;
-            color: white;
+            color: black;
+            text-align: center;
         }
         .hero {
             height: 100vh;
@@ -25,54 +25,63 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: url('https://source.unsplash.com/random/1600x900/?technology,space') no-repeat center center/cover;
-            text-align: center;
+            background: linear-gradient(to right, #000428, #004e92);
+            color: white;
         }
         .hero h1 {
             font-size: 3em;
             font-weight: 600;
-            animation: fadeIn 2s ease-in-out;
         }
         .hero p {
             font-size: 1.5em;
             color: #ffcc00;
-            animation: fadeIn 3s ease-in-out;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 15px;
+            font-size: 2em;
+            transition: 0.3s;
+        }
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+        .scroll-down {
+            position: absolute;
+            bottom: 20px;
+            font-size: 1.2em;
         }
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.8);
             padding: 15px;
             display: flex;
             justify-content: center;
-            z-index: 1000;
         }
         nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
             font-size: 1.2em;
-            transition: color 0.3s;
+            transition: 0.3s;
         }
         nav a:hover {
             color: #ffcc00;
         }
         section {
             padding: 80px 20px;
-            text-align: center;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease-in-out;
         }
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+        #about { background: white; }
+        #experience { background: #f0f0f0; }
+        #education { background: #d3d3d3; }
+        #projects { background: white; }
+        #skills { background: #f0f0f0; }
+        #achievements { background: #d3d3d3; }
+        #contact { background: white; }
     </style>
 </head>
 <body>
@@ -84,90 +93,48 @@
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#achievements">Achievements</a>
-        <a href="#publications">Publications</a>
+        <a href="publications.html">Publications</a>
         <a href="#contact">Contact</a>
     </nav>
-
     <section class="hero" id="home">
         <h1>Hi, I am Praveen!</h1>
         <p>Aerospace Engineer | Trajectory Optimization | Robotics</p>
+        <div class="social-icons">
+            <a href="https://github.com/your-username" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/praveen" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:praveen@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="scroll-down">Scroll down ⬇</div>
     </section>
-
     <section id="about">
         <h2>About Me</h2>
         <p>PhD candidate in Aerospace Engineering at Auburn University, specializing in robust trajectory optimization, obstacle avoidance, and GNC for UAVs and spacecraft.</p>
     </section>
-
     <section id="experience">
         <h2>Experience</h2>
         <p>Robotics and Simulation Intern at Detect Technologies, developed a high-fidelity simulation environment in Gazebo integrated with PX4 flight control firmware.</p>
     </section>
-
     <section id="education">
         <h2>Education</h2>
-        <ul>
-            <li>PhD in Aerospace Engineering, Auburn University (2020 - Present)</li>
-            <li>MS in Aerospace Engineering, Auburn University (2021 - 2023)</li>
-            <li>B.Tech in Engineering Physics, National Institute of Technology, Calicut (2015 - 2019)</li>
-        </ul>
+        <p>PhD in Aerospace Engineering, Auburn University</p>
     </section>
-
     <section id="projects">
         <h2>Projects</h2>
-        <h3>Experimental Projects</h3>
         <p>Real-Time Collision-Free Trajectory Optimization for Quadcopters, Phase Synchronizing Controllers for Multi Rotors.</p>
-        <h3>Computational and Theoretical Projects</h3>
-        <p>Global Trajectory Optimization Competition, Uncertainty Aware Optimal Control for Trajectory Optimization Problems.</p>
     </section>
-
     <section id="skills">
         <h2>Skills</h2>
         <p>Embedded Systems, Optimization Frameworks, Programming in Python, MATLAB, LabVIEW, and ROS.</p>
     </section>
-
     <section id="achievements">
         <h2>Achievements</h2>
         <p>Recipient of the Charles E. Gavin Fellowship during PhD.</p>
     </section>
-
-    <section id="publications">
-        <h2>Publications</h2>
-        <h3>Journal Papers</h3>
-        <ul>
-            <li>Development and Validation of a Cross-Over Control Algorithm for Counter-Rotating Multi-Rotor Systems.</li>
-            <li>Reduced Desensitization Formulation for optimal control problems.</li>
-            <li>Mapped adjoint control transformation method for low-thrust trajectory design.</li>
-        </ul>
-        <h3>Conference Papers</h3>
-        <ul>
-            <li>Neural Network Based Collision-Free Trajectory Generator for Quadcopters.</li>
-            <li>Monocular 3D Pedestrian Detection and Tracking for Safe Drone Operation.</li>
-            <li>Development and Validation of Phase Controller for Multi-Rotor Systems.</li>
-        </ul>
-    </section>
-
     <section id="contact">
         <h2>Contact</h2>
         <p>Email: praveen@example.com</p>
         <p>GitHub: <a href="https://github.com/your-username">your-username</a></p>
         <p>LinkedIn: <a href="https://linkedin.com/in/praveen">linkedin.com/in/praveen</a></p>
     </section>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let sections = document.querySelectorAll("section");
-            let observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
-    </script>
 </body>
 </html>
