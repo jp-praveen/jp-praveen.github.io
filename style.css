@@ -9,8 +9,8 @@
 
 /* Body and Background */
 body {
-    background: #121212;
-    color: white;
+    background: white; /* Default background */
+    color: black;
     text-align: center;
 }
 
@@ -47,8 +47,8 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url('https://source.unsplash.com/random/1600x900/?technology,space') no-repeat center center/cover;
-    text-align: center;
+    background: linear-gradient(to right, #000428, #004e92);
+    color: white;
 }
 
 .hero h1 {
@@ -65,7 +65,7 @@ nav a:hover {
     animation: fadeIn 3s ease-in-out;
 }
 
-/* Sections Styling */
+/* Section Styling with Alternating Background Colors */
 section {
     padding: 100px 20px;
     text-align: center;
@@ -74,11 +74,19 @@ section {
     transition: all 0.6s ease-in-out;
 }
 
-/* Animate sections on scroll */
 section.visible {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Background Colors for Different Sections */
+#about { background: white; }
+#experience { background: #f0f0f0; }
+#education { background: #d3d3d3; }
+#projects { background: white; }
+#skills { background: #f0f0f0; }
+#achievements { background: #d3d3d3; }
+#contact { background: white; }
 
 /* Section Headings */
 section h2 {
