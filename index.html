@@ -6,44 +6,77 @@
     <title>Praveen's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: #000;
+            color: white;
+            text-align: center;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #000428, #004e92);
+        }
+        .hero h1 {
+            font-size: 3em;
+            font-weight: 600;
+        }
+        .hero p {
+            font-size: 1.5em;
+            color: #ffcc00;
+        }
+        .typing-effect {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 15px;
+            font-size: 2em;
+            transition: 0.3s;
+        }
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+        .scroll-down {
+            position: absolute;
+            bottom: 20px;
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Praveen Jawaharlal Ayyanathan</h1>
+    <section class="hero">
+        <h1>Hi, I'm <span class="typing-effect"></span></h1>
         <p>Aerospace Engineer | Trajectory Optimization | Robotics</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a PhD candidate in Aerospace Engineering at Auburn University, specializing in robust trajectory optimization, obstacle avoidance, and GNC for UAVs and spacecraft.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Obstacle Avoidance for Drones</h3>
-            <p>Developed a real-time guidance system using convex optimization and neural networks for quadcopters.</p>
+        <div class="social-icons">
+            <a href="https://github.com/your-username" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/praveen" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:praveen@example.com"><i class="fas fa-envelope"></i></a>
         </div>
-        <div class="project">
-            <h3>Phase Synchronization of Multi-Rotors</h3>
-            <p>Designed a phase synchronization controller for counter-rotating propellers using predictive control.</p>
-        </div>
+        <div class="scroll-down">Scroll down ⬇</div>
     </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: praveen@example.com</p>
-        <p>GitHub: <a href="https://github.com/your-username">your-username</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/praveen">linkedin.com/in/praveen</a></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Praveen Jawaharlal Ayyanathan</p>
-    </footer>
+    <script>
+        var typed = new Typed(".typing-effect", {
+            strings: ["Praveen Jawaharlal Ayyanathan", "Aerospace Engineer", "GNC & Robotics Enthusiast"],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+    </script>
 </body>
 </html>
