@@ -161,24 +161,37 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+            height: 100px; /* Initial height */
         }
 
-        .project-card:hover {
-            transform: translateY(-10px);
+        .project-card.expanded {
+            height: auto; /* Expanded height */
         }
 
         .project-card h3 {
             color: #004e92;
             margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .project-card.expanded h3 {
+            font-size: 1.5em; /* Larger title when expanded */
         }
 
         .project-card p {
+            display: none; /* Hidden by default */
             margin-bottom: 20px;
         }
 
+        .project-card.expanded p {
+            display: block; /* Show content when expanded */
+        }
+
         .btn {
-            display: inline-block;
+            display: none; /* Hidden by default */
             padding: 10px 20px;
             background: #004e92;
             color: white;
@@ -187,8 +200,8 @@
             transition: background 0.3s ease;
         }
 
-        .btn:hover {
-            background: #003366;
+        .project-card.expanded .btn {
+            display: inline-block; /* Show button when expanded */
         }
 
         /* Footer */
@@ -302,17 +315,17 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-grid">
-            <div class="project-card">
+            <div class="project-card" onclick="toggleProject(this)">
                 <h3>Real-Time Collision-Free Trajectory Optimization</h3>
                 <p>Developed an object detection and localization algorithm for quadcopters using YOLO ROS and ZED/Realsense cameras. Integrated neural networks for trajectory prediction and collision avoidance.</p>
                 <a href="#" class="btn">View Project</a>
             </div>
-            <div class="project-card">
+            <div class="project-card" onclick="toggleProject(this)">
                 <h3>Phase Synchronizing Controllers for Multi-Rotors</h3>
                 <p>Developed and tested a precise speed and position PID controller for multi-rotors. Extended the controller to synchronize co-rotating propellers and control blade crossover in counter-rotating propellers.</p>
                 <a href="#" class="btn">View Project</a>
             </div>
-            <div class="project-card">
+            <div class="project-card" onclick="toggleProject(this)">
                 <h3>Global Trajectory Optimization Competition</h3>
                 <p>Developed low-level and high-level optimizers for asteroid mining missions. Placed 20th out of 102 teams in the competition.</p>
                 <a href="#" class="btn">View Project</a>
@@ -346,6 +359,11 @@
 
             // Show the selected tab content
             document.getElementById(`${tabName}-content`).classList.add('active');
+        }
+
+        // JavaScript to handle project card expansion
+        function toggleProject(card) {
+            card.classList.toggle('expanded');
         }
     </script>
 </body>
