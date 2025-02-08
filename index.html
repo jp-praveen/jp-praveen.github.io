@@ -164,11 +164,12 @@
             transition: all 0.3s ease;
             cursor: pointer;
             overflow: hidden;
-            height: 100px; /* Initial height */
         }
 
-        .project-card.expanded {
-            height: auto; /* Expanded height */
+        .project-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
 
         .project-card h3 {
@@ -177,21 +178,13 @@
             transition: all 0.3s ease;
         }
 
-        .project-card.expanded h3 {
-            font-size: 1.5em; /* Larger title when expanded */
-        }
-
         .project-card p {
             display: none; /* Hidden by default */
             margin-bottom: 20px;
         }
 
-        .project-card.expanded p {
-            display: block; /* Show content when expanded */
-        }
-
-        .btn {
-            display: none; /* Hidden by default */
+        .project-card .btn {
+            display: inline-block; /* Show button by default */
             padding: 10px 20px;
             background: #004e92;
             color: white;
@@ -200,8 +193,16 @@
             transition: background 0.3s ease;
         }
 
-        .project-card.expanded .btn {
-            display: inline-block; /* Show button when expanded */
+        .project-card .btn:hover {
+            background: #003366;
+        }
+
+        .project-card.expanded {
+            padding: 20px;
+        }
+
+        .project-card.expanded p {
+            display: block; /* Show content when expanded */
         }
 
         /* Footer */
@@ -315,20 +316,35 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-grid">
-            <div class="project-card" onclick="toggleProject(this)">
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Project 1 Image">
                 <h3>Real-Time Collision-Free Trajectory Optimization</h3>
-                <p>Developed an object detection and localization algorithm for quadcopters using YOLO ROS and ZED/Realsense cameras. Integrated neural networks for trajectory prediction and collision avoidance.</p>
-                <a href="#" class="btn">View Project</a>
+                <p class="project-details">
+                    Developed an object detection and localization algorithm for quadcopters using YOLO ROS and ZED/Realsense cameras. Integrated neural networks for trajectory prediction and collision avoidance.
+                    <br><br>
+                    <strong>Technologies Used:</strong> Python, ROS, Gazebo, YOLO, ZED Camera.
+                </p>
+                <a href="#" class="btn" onclick="toggleProject(this)">View Project</a>
             </div>
-            <div class="project-card" onclick="toggleProject(this)">
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Project 2 Image">
                 <h3>Phase Synchronizing Controllers for Multi-Rotors</h3>
-                <p>Developed and tested a precise speed and position PID controller for multi-rotors. Extended the controller to synchronize co-rotating propellers and control blade crossover in counter-rotating propellers.</p>
-                <a href="#" class="btn">View Project</a>
+                <p class="project-details">
+                    Developed and tested a precise speed and position PID controller for multi-rotors. Extended the controller to synchronize co-rotating propellers and control blade crossover in counter-rotating propellers.
+                    <br><br>
+                    <strong>Technologies Used:</strong> MATLAB, Simulink, Arduino, PID Control.
+                </p>
+                <a href="#" class="btn" onclick="toggleProject(this)">View Project</a>
             </div>
-            <div class="project-card" onclick="toggleProject(this)">
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Project 3 Image">
                 <h3>Global Trajectory Optimization Competition</h3>
-                <p>Developed low-level and high-level optimizers for asteroid mining missions. Placed 20th out of 102 teams in the competition.</p>
-                <a href="#" class="btn">View Project</a>
+                <p class="project-details">
+                    Developed low-level and high-level optimizers for asteroid mining missions. Placed 20th out of 102 teams in the competition.
+                    <br><br>
+                    <strong>Technologies Used:</strong> MATLAB, Optimization Algorithms, Trajectory Planning.
+                </p>
+                <a href="#" class="btn" onclick="toggleProject(this)">View Project</a>
             </div>
         </div>
     </section>
@@ -362,8 +378,9 @@
         }
 
         // JavaScript to handle project card expansion
-        function toggleProject(card) {
-            card.classList.toggle('expanded');
+        function toggleProject(button) {
+            const projectCard = button.closest('.project-card');
+            projectCard.classList.toggle('expanded');
         }
     </script>
 </body>
