@@ -7,22 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        @font-face {
-            font-family: 'Poppins';
-            src: url('fonts/Poppins-Regular.woff2') format('woff2'),
-                 url('fonts/Poppins-Regular.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-        
-        @font-face {
-            font-family: 'Poppins';
-            src: url('fonts/Poppins-Bold.woff2') format('woff2'),
-                 url('fonts/Poppins-Bold.woff') format('woff');
-            font-weight: bold;
-            font-style: normal;
-        }
-        
+        /* General Styling */
         * {
             margin: 0;
             padding: 0;
@@ -30,10 +15,44 @@
             font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
+
         body {
-            color: black;
+            color: #333;
+            line-height: 1.6;
             text-align: center;
         }
+
+        h1, h2, h3 {
+            color: #004e92;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+            text-shadow: 0px 0px 5px rgba(255, 204, 0, 0.8);
+        }
+
+        /* Hero Section */
         .hero {
             height: 100vh;
             display: flex;
@@ -43,109 +62,300 @@
             background: linear-gradient(to right, #000428, #004e92);
             color: white;
         }
+
         .hero h1 {
-            font-size: 3em;
-            font-weight: 600;
+            font-size: 3.5em;
+            font-weight: 700;
+            text-transform: uppercase;
+            animation: fadeIn 2s ease-in-out;
         }
+
         .hero p {
-            font-size: 1.5em;
+            font-size: 1.6em;
             color: #ffcc00;
+            font-weight: 500;
+            animation: fadeIn 3s ease-in-out;
         }
+
         .social-icons {
             margin-top: 20px;
         }
+
         .social-icons a {
             color: white;
             margin: 0 15px;
             font-size: 2em;
-            transition: 0.3s;
+            transition: all 0.3s ease-in-out;
         }
+
         .social-icons a:hover {
             color: #ffcc00;
+            transform: scale(1.2);
         }
+
         .scroll-down {
             position: absolute;
             bottom: 20px;
             font-size: 1.2em;
+            animation: bounce 2s infinite;
         }
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 15px;
+
+        /* About, Education, and Experience Section */
+        #about-education-experience {
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .tabs {
             display: flex;
             justify-content: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 1.2em;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            color: #ffcc00;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 50px 20px;
-        }
-        .section-heading {
-            text-align: center;
+            gap: 20px;
             margin-bottom: 40px;
-            font-size: 2.5em;
-            font-weight: bold;
         }
-        .experience-timeline, .education-block {
+
+        .tab-button {
+            background: #004e92;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .tab-button:hover {
+            background: #003366;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 0 auto;
             text-align: left;
-            margin-bottom: 30px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Projects Section */
+        #projects {
+            padding: 100px 20px;
+            background: #f0f0f0;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-card h3 {
+            color: #004e92;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #004e92;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #003366;
+        }
+
+        /* Footer */
+        footer {
+            background: #000428;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5em;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1.2em;
+            }
+            nav a {
+                font-size: 1em;
+                margin: 0 10px;
+            }
+            section {
+                padding: 60px 10px;
+            }
+            .tabs {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .tab-button {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <nav>
         <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
+        <a href="#about-education-experience">About/Education/Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#achievements">Achievements</a>
         <a href="#contact">Contact</a>
-        <a href="#publications">Publications</a>
     </nav>
     <section class="hero" id="home">
-        <h1>Hi, I am Praveen!</h1>
+        <h1>Hi, I am Praveen J. Ayyanathan!</h1>
         <p>Aerospace Engineer | Trajectory Optimization | Robotics</p>
         <div class="social-icons">
-            <a href="https://github.com/jp-praveen" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/praveen-jawahalal-ayyanathan/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.researchgate.net/profile/Praveen-Jawaharlal-Ayyanathan?ev=hdr_xprf" target="_blank"><i class="fa-brands fa-researchgate"></i></a>
-            <a href="mailto:jp.praveen2397@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/your-username" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/praveen" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:praveen@example.com"><i class="fa-solid fa-envelope"></i></a>
         </div>
         <div class="scroll-down">Scroll down ⬇</div>
     </section>
-    <div class="container" style="background: white;">
-        <h2 class="section-heading">About Me</h2>
-        <p>My research focuses on robust guidance, control, and autonomy strategies for aerospace systems, including spacecraft and UAVs.</p>
-    </div>
-    <div class="container" style="background: #f0f0f0;">
-        <h2 class="section-heading">Experience</h2>
-        <div class="experience-timeline">
-            <h3>Robotics & Simulation Intern</h3>
-            <h4>Detect Technologies</h4>
-            <p>Developed a high-fidelity simulation environment in Gazebo integrated with PX4 flight control firmware.</p>
+    <section id="about-education-experience">
+        <div class="tabs">
+            <button class="tab-button" onmouseover="showContent('about')">About</button>
+            <button class="tab-button" onmouseover="showContent('education')">Education</button>
+            <button class="tab-button" onmouseover="showContent('experience')">Experience</button>
         </div>
-    </div>
-    <div class="container" style="background: #d3d3d3;">
-        <h2 class="section-heading">Education</h2>
-        <div class="education-block">
-            <h3>Auburn University</h3>
-            <h4>PhD in Aerospace Engineering</h4>
-            <p>Research in robust trajectory optimization and control for UAVs and spacecraft.</p>
+        <div class="content">
+            <div id="about-content" class="tab-content active">
+                <h2>About Me</h2>
+                <p>
+                    I am a PhD candidate in Aerospace Engineering at Auburn University, specializing in robust trajectory optimization, obstacle avoidance, and Guidance, Navigation, and Control (GNC) for UAVs and spacecraft. My research focuses on developing real-time collision-free trajectory optimization algorithms for quadcopters and phase synchronization controllers for multi-rotor systems. I have a strong background in embedded systems, optimization frameworks, and computational tools like Python, MATLAB, and ROS.
+                </p>
+            </div>
+            <div id="education-content" class="tab-content">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>PhD in Aerospace Engineering</h3>
+                    <p><strong>Auburn University</strong> | Fall 2020 - Present | GPA: 4.00/4.00</p>
+                </div>
+                <div class="education-item">
+                    <h3>MS in Aerospace Engineering</h3>
+                    <p><strong>Auburn University</strong> | Fall 2021 - Spring 2023 | GPA: 4.00/4.00</p>
+                </div>
+                <div class="education-item">
+                    <h3>B.Tech in Engineering Physics</h3>
+                    <p><strong>National Institute of Technology, Calicut</strong> | 2015 - 2019 | GPA: 8.12/10.00</p>
+                </div>
+            </div>
+            <div id="experience-content" class="tab-content">
+                <h2>Experience</h2>
+                <div class="experience-item">
+                    <h3>Robotics and Simulation Intern</h3>
+                    <p><strong>Detect Technologies</strong> | Chennai, India | March 2020 - July 2020</p>
+                    <ul>
+                        <li>Developed a high-fidelity simulation environment in Gazebo using CAD models of a custom hexacopter and integrated it with PX4 flight control firmware.</li>
+                        <li>Designed a realistic virtual industrial setting featuring oil tanks for pilot training in inspection routines.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Real-Time Collision-Free Trajectory Optimization for Quadcopters</h3>
+                    <p><strong>Auburn University</strong> | Auburn, AL | March 2023 - Present</p>
+                    <ul>
+                        <li>Developed an object detection and localization (ODL) algorithm using YOLO ROS wrapper and ZED/Realsense stereo camera.</li>
+                        <li>Designed neural network models for trajectory prediction and implemented a correction algorithm for collision-free trajectories.</li>
+                        <li>Currently integrating and testing the ODL and trajectory planning neural networks on a quadcopter with a Pixhawk flight controller and Jetson Nano.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Real-Time Collision-Free Trajectory Optimization</h3>
+                <p>Developed an object detection and localization algorithm for quadcopters using YOLO ROS and ZED/Realsense cameras. Integrated neural networks for trajectory prediction and collision avoidance.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Phase Synchronizing Controllers for Multi-Rotors</h3>
+                <p>Developed and tested a precise speed and position PID controller for multi-rotors. Extended the controller to synchronize co-rotating propellers and control blade crossover in counter-rotating propellers.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Global Trajectory Optimization Competition</h3>
+                <p>Developed low-level and high-level optimizers for asteroid mining missions. Placed 20th out of 102 teams in the competition.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me via email or connect with me on LinkedIn!</p>
+        <div class="contact-info">
+            <a href="mailto:pzj0008@auburn.edu" class="btn">Email Me</a>
+            <a href="https://linkedin.com/in/praveen" target="_blank" class="btn">LinkedIn</a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Praveen J. Ayyanathan. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://github.com/your-username" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/praveen" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:praveen@example.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to handle tab content switching
+        function showContent(tabName) {
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Show the selected tab content
+            document.getElementById(`${tabName}-content`).classList.add('active');
+        }
+    </script>
 </body>
 </html>
