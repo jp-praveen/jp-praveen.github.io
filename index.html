@@ -352,17 +352,54 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-grid">
+            <!-- Project 1 -->
             <div class="project-card">
                 <h3>Real-Time Collision-Free Trajectory Optimization</h3>
                 <img src="images/project1.jpg" alt="Real-Time Collision-Free Trajectory Optimization">
                 <button class="btn" onclick="openModal('modal1')">View Project</button>
             </div>
+            <!-- Project 2 -->
             <div class="project-card">
                 <h3>Phase Synchronizing Controllers for Multi-Rotors</h3>
                 <img src="images/project2.jpg" alt="Phase Synchronizing Controllers for Multi-Rotors">
                 <button class="btn" onclick="openModal('modal2')">View Project</button>
             </div>
-            <!-- Repeat for other projects -->
+            <!-- Project 3 -->
+            <div class="project-card">
+                <h3>Global Trajectory Optimization Competition</h3>
+                <img src="images/project3.jpg" alt="Global Trajectory Optimization Competition">
+                <button class="btn" onclick="openModal('modal3')">View Project</button>
+            </div>
+            <!-- Project 4 -->
+            <div class="project-card">
+                <h3>Uncertainty Aware Optimal Control</h3>
+                <img src="images/project4.jpg" alt="Uncertainty Aware Optimal Control">
+                <button class="btn" onclick="openModal('modal4')">View Project</button>
+            </div>
+            <!-- Project 5 -->
+            <div class="project-card">
+                <h3>State Estimation</h3>
+                <img src="images/project5.jpg" alt="State Estimation">
+                <button class="btn" onclick="openModal('modal5')">View Project</button>
+            </div>
+            <!-- Project 6 -->
+            <div class="project-card">
+                <h3>Minimum Snap Trajectory Generator with Time Allocation</h3>
+                <img src="images/project6.jpg" alt="Minimum Snap Trajectory Generator with Time Allocation">
+                <button class="btn" onclick="openModal('modal6')">View Project</button>
+            </div>
+            <!-- Project 7 -->
+            <div class="project-card">
+                <h3>Deep Q-Learning</h3>
+                <img src="images/project7.jpg" alt="Deep Q-Learning">
+                <button class="btn" onclick="openModal('modal7')">View Project</button>
+            </div>
+            <!-- Project 8 -->
+            <div class="project-card">
+                <h3>Robust Costate Initialization for Optimal Control Problems</h3>
+                <img src="images/project8.jpg" alt="Robust Costate Initialization for Optimal Control Problems">
+                <button class="btn" onclick="openModal('modal8')">View Project</button>
+            </div>
         </div>
     </section>
     <section id="contact">
@@ -384,6 +421,7 @@
     </footer>
 
     <!-- Modals for Projects -->
+    <!-- Modal 1 -->
     <div id="modal1" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal1')">&times;</span>
@@ -396,6 +434,7 @@
             </p>
         </div>
     </div>
+    <!-- Modal 2 -->
     <div id="modal2" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal2')">&times;</span>
@@ -408,7 +447,84 @@
             </p>
         </div>
     </div>
-    <!-- Repeat for other projects -->
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal3')">&times;</span>
+            <h3>Global Trajectory Optimization Competition</h3>
+            <img src="images/project3.jpg" alt="Global Trajectory Optimization Competition">
+            <p>
+                Developed low-level and high-level optimizers for asteroid mining missions. Placed 20th out of 102 teams in the competition.
+                <br><br>
+                <strong>Technologies Used:</strong> MATLAB, Optimization Algorithms, Trajectory Planning.
+            </p>
+        </div>
+    </div>
+    <!-- Modal 4 -->
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal4')">&times;</span>
+            <h3>Uncertainty Aware Optimal Control</h3>
+            <img src="images/project4.jpg" alt="Uncertainty Aware Optimal Control">
+            <p>
+                Developed a robust method for reducing the sensitivity of trajectory optimization problems to parameter uncertainties with reduced computational load compared to conventional desensitization methods.
+                <br><br>
+                <strong>Technologies Used:</strong> MATLAB, Optimization, Control Theory.
+            </p>
+        </div>
+    </div>
+    <!-- Modal 5 -->
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal5')">&times;</span>
+            <h3>State Estimation</h3>
+            <img src="images/project5.jpg" alt="State Estimation">
+            <p>
+                Developed Kalman and Madgwick filters for orientation estimation using MPU-9250 IMU and NEO-M8N GPS data.
+                <br><br>
+                <strong>Technologies Used:</strong> Arduino, MATLAB, Kalman Filter, Madgwick Filter.
+            </p>
+        </div>
+    </div>
+    <!-- Modal 6 -->
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal6')">&times;</span>
+            <h3>Minimum Snap Trajectory Generator with Time Allocation</h3>
+            <img src="images/project6.jpg" alt="Minimum Snap Trajectory Generator with Time Allocation">
+            <p>
+                Designed a trajectory generator for quadcopters using minimum snap optimization with time allocation for smooth and efficient flight paths.
+                <br><br>
+                <strong>Technologies Used:</strong> Python, Optimization, Trajectory Planning.
+            </p>
+        </div>
+    </div>
+    <!-- Modal 7 -->
+    <div id="modal7" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal7')">&times;</span>
+            <h3>Deep Q-Learning</h3>
+            <img src="images/project7.jpg" alt="Deep Q-Learning">
+            <p>
+                Developed a reinforcement learning agent using Deep Q-Networks to achieve soft landings in a lunar environment.
+                <br><br>
+                <strong>Technologies Used:</strong> Python, PyTorch, Reinforcement Learning.
+            </p>
+        </div>
+    </div>
+    <!-- Modal 8 -->
+    <div id="modal8" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal8')">&times;</span>
+            <h3>Robust Costate Initialization for Optimal Control Problems</h3>
+            <img src="images/project8.jpg" alt="Robust Costate Initialization for Optimal Control Problems">
+            <p>
+                Developed a new costate initialization method based on the Adjoint Control Transformation for low-thrust trajectory optimization, achieving faster convergence than traditional methods.
+                <br><br>
+                <strong>Technologies Used:</strong> MATLAB, Optimization, Control Theory.
+            </p>
+        </div>
+    </div>
 
     <script>
         // JavaScript to handle tab content switching
