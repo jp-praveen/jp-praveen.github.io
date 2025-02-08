@@ -163,7 +163,12 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             cursor: pointer;
-            overflow: hidden;
+            text-align: left;
+        }
+
+        .project-card h3 {
+            color: #004e92;
+            margin-bottom: 15px;
         }
 
         .project-card img {
@@ -172,19 +177,8 @@
             margin-bottom: 15px;
         }
 
-        .project-card h3 {
-            color: #004e92;
-            margin-bottom: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .project-card p {
-            display: none; /* Hidden by default */
-            margin-bottom: 20px;
-        }
-
         .project-card .btn {
-            display: inline-block; /* Show button by default */
+            display: inline-block;
             padding: 10px 20px;
             background: #004e92;
             color: white;
@@ -198,12 +192,52 @@
             background: #003366;
         }
 
-        .project-card.expanded {
-            padding: 20px;
+        /* Modal/Pop-up */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
         }
 
-        .project-card.expanded p {
-            display: block; /* Show content when expanded */
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            text-align: left;
+            position: relative;
+        }
+
+        .modal-content h3 {
+            color: #004e92;
+            margin-bottom: 15px;
+        }
+
+        .modal-content img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .modal-content p {
+            margin-bottom: 20px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #004e92;
         }
 
         /* Footer */
@@ -319,85 +353,16 @@
         <h2>Projects</h2>
         <div class="project-grid">
             <div class="project-card">
-                <img src="images/guidance_odl_algorithm.jpg" alt="Project 1 Image">
                 <h3>Real-Time Collision-Free Trajectory Optimization</h3>
-                <p class="project-details">
-                    Developed an object detection and localization algorithm for quadcopters using YOLO ROS and ZED/Realsense cameras. Integrated neural networks for trajectory prediction and collision avoidance.
-                    <br><br>
-                    <strong>Technologies Used:</strong> Python, ROS, Gazebo, YOLO, ZED Camera.
-                </p>
-                <button class="btn" onclick="toggleProject(this)">View Project</button>
+                <img src="images/project1.jpg" alt="Real-Time Collision-Free Trajectory Optimization">
+                <button class="btn" onclick="openModal('modal1')">View Project</button>
             </div>
             <div class="project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Project 2 Image">
                 <h3>Phase Synchronizing Controllers for Multi-Rotors</h3>
-                <p class="project-details">
-                    Developed and tested a precise speed and position PID controller for multi-rotors. Extended the controller to synchronize co-rotating propellers and control blade crossover in counter-rotating propellers.
-                    <br><br>
-                    <strong>Technologies Used:</strong> MATLAB, Simulink, Arduino, PID Control.
-                </p>
-                <button class="btn" onclick="toggleProject(this)">View Project</button>
+                <img src="images/project2.jpg" alt="Phase Synchronizing Controllers for Multi-Rotors">
+                <button class="btn" onclick="openModal('modal2')">View Project</button>
             </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Project 3 Image">
-                <h3>Global Trajectory Optimization Competition</h3>
-                <p class="project-details">
-                    Developed low-level and high-level optimizers for asteroid mining missions. Placed 20th out of 102 teams in the competition.
-                    <br><br>
-                    <strong>Technologies Used:</strong> MATLAB, Optimization Algorithms, Trajectory Planning.
-                </p>
-                <button class="btn" onclick="toggleProject(this)">View Project</button>
-            </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Project 4 Image">
-                <h3>Uncertainty Aware Optimal Control</h3>
-                <p class="project-details">
-                    Developed a robust method for reducing the sensitivity of trajectory optimization problems to parameter uncertainties with reduced computational load compared to conventional desensitization methods.
-                    <br><br>
-                    <strong>Technologies Used:</strong> MATLAB, Optimization, Control Theory.
-                </p>
-                <button class="btn" onclick="toggleProject(this)">View Project</button>
-            </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Project 5 Image">
-                <h3>State Estimation</h3>
-                <p class="project-details">
-                    Developed Kalman and Madgwick filters for orientation estimation using MPU-9250 IMU and NEO-M8N GPS data.
-                    <br><br>
-                    <strong>Technologies Used:</strong> Arduino, MATLAB, Kalman Filter, Madgwick Filter.
-                </p>
-                <button class="btn" onclick="toggleProject(this)">View Project</button>
-            </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Project 6 Image">
-                <h3>Minimum Snap Trajectory Generator with Time Allocation</h3>
-                <p class="project-details">
-                    Designed a trajectory generator for quadcopters using minimum snap optimization with time allocation for smooth and efficient flight paths.
-                    <br><br>
-                    <strong>Technologies Used:</strong> Python, Optimization, Trajectory Planning.
-                </p>
-                <button class="btn" onclick="toggleProject(this)">View Project</button>
-            </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Project 7 Image">
-                <h3>Deep Q-Learning</h3>
-                <p class="project-details">
-                    Developed a reinforcement learning agent using Deep Q-Networks to achieve soft landings in a lunar environment.
-                    <br><br>
-                    <strong>Technologies Used:</strong> Python, PyTorch, Reinforcement Learning.
-                </p>
-                <button class="btn" onclick="toggleProject(this)">View Project</button>
-            </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Project 8 Image">
-                <h3>Robust Costate Initialization for Optimal Control Problems</h3>
-                <p class="project-details">
-                    Developed a new costate initialization method based on the Adjoint Control Transformation for low-thrust trajectory optimization, achieving faster convergence than traditional methods.
-                    <br><br>
-                    <strong>Technologies Used:</strong> MATLAB, Optimization, Control Theory.
-                </p>
-                <button class="btn" onclick="toggleProject(this)">View Project</button>
-            </div>
+            <!-- Repeat for other projects -->
         </div>
     </section>
     <section id="contact">
@@ -418,6 +383,33 @@
         </div>
     </footer>
 
+    <!-- Modals for Projects -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal1')">&times;</span>
+            <h3>Real-Time Collision-Free Trajectory Optimization</h3>
+            <img src="images/project1.jpg" alt="Real-Time Collision-Free Trajectory Optimization">
+            <p>
+                Developed an object detection and localization algorithm for quadcopters using YOLO ROS and ZED/Realsense cameras. Integrated neural networks for trajectory prediction and collision avoidance.
+                <br><br>
+                <strong>Technologies Used:</strong> Python, ROS, Gazebo, YOLO, ZED Camera.
+            </p>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal2')">&times;</span>
+            <h3>Phase Synchronizing Controllers for Multi-Rotors</h3>
+            <img src="images/project2.jpg" alt="Phase Synchronizing Controllers for Multi-Rotors">
+            <p>
+                Developed and tested a precise speed and position PID controller for multi-rotors. Extended the controller to synchronize co-rotating propellers and control blade crossover in counter-rotating propellers.
+                <br><br>
+                <strong>Technologies Used:</strong> MATLAB, Simulink, Arduino, PID Control.
+            </p>
+        </div>
+    </div>
+    <!-- Repeat for other projects -->
+
     <script>
         // JavaScript to handle tab content switching
         function showContent(tabName) {
@@ -430,10 +422,20 @@
             document.getElementById(`${tabName}-content`).classList.add('active');
         }
 
-        // JavaScript to handle project card expansion
-        function toggleProject(button) {
-            const projectCard = button.closest('.project-card');
-            projectCard.classList.toggle('expanded');
+        // JavaScript to handle modal/pop-up
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Close modal when clicking outside the modal content
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
         }
     </script>
 </body>
