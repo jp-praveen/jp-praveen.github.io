@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Praveen's Portfolio</title>
+    <title>Praveen J. Ayyanathan - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
@@ -91,6 +91,7 @@
             padding: 80px 20px;
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
         }
@@ -101,6 +102,46 @@
         #skills { background: #f0f0f0; }
         #achievements { background: #d3d3d3; }
         #contact { background: white; }
+        .experience-item, .education-item, .project-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            max-width: 800px;
+            width: 100%;
+            text-align: left;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #004e92;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #003366;
+        }
+        footer {
+            background: #000428;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5em;
+        }
     </style>
 </head>
 <body>
@@ -112,11 +153,10 @@
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#achievements">Achievements</a>
-        <a href="publications.html">Publications</a>
         <a href="#contact">Contact</a>
     </nav>
     <section class="hero" id="home">
-        <h1>Hi, I am Praveen!</h1>
+        <h1>Hi, I am Praveen J. Ayyanathan!</h1>
         <p>Aerospace Engineer | Trajectory Optimization | Robotics</p>
         <div class="social-icons">
             <a href="https://github.com/your-username" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -127,15 +167,105 @@
     </section>
     <section id="about">
         <h2>About Me</h2>
-        <p>PhD candidate in Aerospace Engineering at Auburn University, specializing in robust trajectory optimization, obstacle avoidance, and GNC for UAVs and spacecraft.</p>
+        <p>
+            I am a PhD candidate in Aerospace Engineering at Auburn University, specializing in robust trajectory optimization, obstacle avoidance, and Guidance, Navigation, and Control (GNC) for UAVs and spacecraft. My research focuses on developing real-time collision-free trajectory optimization algorithms for quadcopters and phase synchronization controllers for multi-rotor systems. I have a strong background in embedded systems, optimization frameworks, and computational tools like Python, MATLAB, and ROS.
+        </p>
     </section>
     <section id="experience">
         <h2>Experience</h2>
-        <p>Robotics and Simulation Intern at Detect Technologies, developed a high-fidelity simulation environment in Gazebo integrated with PX4 flight control firmware.</p>
+        <div class="experience-item">
+            <h3>Robotics and Simulation Intern</h3>
+            <p><strong>Detect Technologies</strong> | Chennai, India | March 2020 - July 2020</p>
+            <ul>
+                <li>Developed a high-fidelity simulation environment in Gazebo using CAD models of a custom hexacopter and integrated it with PX4 flight control firmware.</li>
+                <li>Designed a realistic virtual industrial setting featuring oil tanks for pilot training in inspection routines.</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <h3>Real-Time Collision-Free Trajectory Optimization for Quadcopters</h3>
+            <p><strong>Auburn University</strong> | Auburn, AL | March 2023 - Present</p>
+            <ul>
+                <li>Developed an object detection and localization (ODL) algorithm using YOLO ROS wrapper and ZED/Realsense stereo camera.</li>
+                <li>Designed neural network models for trajectory prediction and implemented a correction algorithm for collision-free trajectories.</li>
+                <li>Currently integrating and testing the ODL and trajectory planning neural networks on a quadcopter with a Pixhawk flight controller and Jetson Nano.</li>
+            </ul>
+        </div>
     </section>
     <section id="education">
         <h2>Education</h2>
-        <p>PhD in Aerospace Engineering, Auburn University</p>
+        <div class="education-item">
+            <h3>PhD in Aerospace Engineering</h3>
+            <p><strong>Auburn University</strong> | Fall 2020 - Present | GPA: 4.00/4.00</p>
+        </div>
+        <div class="education-item">
+            <h3>MS in Aerospace Engineering</h3>
+            <p><strong>Auburn University</strong> | Fall 2021 - Spring 2023 | GPA: 4.00/4.00</p>
+        </div>
+        <div class="education-item">
+            <h3>B.Tech in Engineering Physics</h3>
+            <p><strong>National Institute of Technology, Calicut</strong> | 2015 - 2019 | GPA: 8.12/10.00</p>
+        </div>
     </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Real-Time Collision-Free Trajectory Optimization</h3>
+                <p>Developed an object detection and localization algorithm for quadcopters using YOLO ROS and ZED/Realsense cameras. Integrated neural networks for trajectory prediction and collision avoidance.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Phase Synchronizing Controllers for Multi-Rotors</h3>
+                <p>Developed and tested a precise speed and position PID controller for multi-rotors. Extended the controller to synchronize co-rotating propellers and control blade crossover in counter-rotating propellers.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Global Trajectory Optimization Competition</h3>
+                <p>Developed low-level and high-level optimizers for asteroid mining missions. Placed 20th out of 102 teams in the competition.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Embedded Systems & Hardware</h3>
+                <p>Arduino, Raspberry Pi, Jetson Nano, Pixhawk 6C, Intel Realsense, ZED mini stereo camera, MPU9050, NEO-M8N GPS.</p>
+            </div>
+            <div class="project-card">
+                <h3>Programming Languages</h3>
+                <p>Python, C, MATLAB, LabVIEW, Simulink, ROS, Gazebo.</p>
+            </div>
+            <div class="project-card">
+                <h3>Optimization & Computational Frameworks</h3>
+                <p>CVX, GPOPS-II, CasADi, IPOPT, PyTorch.</p>
+            </div>
+        </div>
+    </section>
+    <section id="achievements">
+        <h2>Achievements</h2>
+        <ul>
+            <li>Recipient of the Charles E. Gavin Fellowship during my PhD.</li>
+            <li>Placed 20th out of 102 teams in the Global Trajectory Optimization Competition 12 - Asteroid Mining.</li>
+            <li>Provisional patent applied for Phase Synchronizing Controllers for Multi-Rotors.</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me via email or connect with me on LinkedIn!</p>
+        <div class="contact-info">
+            <a href="mailto:pzj0008@auburn.edu" class="btn">Email Me</a>
+            <a href="https://linkedin.com/in/praveen" target="_blank" class="btn">LinkedIn</a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Praveen J. Ayyanathan. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://github.com/your-username" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/praveen" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:praveen@example.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </footer>
 </body>
 </html>
