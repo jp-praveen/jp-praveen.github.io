@@ -7,11 +7,29 @@
     scroll-behavior: smooth;
 }
 
-/* Body and Background */
+/* Self-Hosted Poppins Font */
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Regular.woff2') format('woff2'),
+         url('fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Bold.woff2') format('woff2'),
+         url('fonts/Poppins-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Apply Poppins Font */
 body {
     background: white; /* Default background */
     color: black;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Navigation Bar */
@@ -65,7 +83,7 @@ nav a:hover {
     animation: fadeIn 3s ease-in-out;
 }
 
-/* Section Styling with Alternating Background Colors */
+/* Sections with Alternating Background Colors */
 section {
     padding: 100px 20px;
     text-align: center;
@@ -79,7 +97,7 @@ section.visible {
     transform: translateY(0);
 }
 
-/* Background Colors for Different Sections */
+/* Alternating Background Colors */
 #about { background: white; }
 #experience { background: #f0f0f0; }
 #education { background: #d3d3d3; }
