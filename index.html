@@ -100,8 +100,8 @@
             animation: bounce 2s infinite;
         }
 
-        /* About, Education, and Experience Section */
-        #about-education-experience {
+        /* About Section */
+        #about {
             padding: 100px 20px;
             background: white;
         }
@@ -244,7 +244,7 @@
 <body>
     <nav>
         <a href="#home">Home</a>
-        <a href="#about-education-experience">About/Education/Experience</a>
+        <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
@@ -258,11 +258,11 @@
         </div>
         <div class="scroll-down">Scroll down ⬇</div>
     </section>
-    <section id="about-education-experience">
+    <section id="about">
         <div class="tabs">
             <button class="tab-button" onmouseover="showContent('about')">About</button>
             <button class="tab-button" onmouseover="showContent('education')">Education</button>
-            <button class="tab-button" onmouseover="showContent('experience')">Experience</button>
+            <button class="tab-button" onmouseover="showContent('industry-experience')">Industry Experience</button>
         </div>
         <div class="content">
             <div id="about-content" class="tab-content active">
@@ -275,7 +275,7 @@
                 <h2>Education</h2>
                 <div class="education-item">
                     <h3>PhD in Aerospace Engineering</h3>
-                    <p><strong>Auburn University</strong> | Fall 2020 - Present | GPA: 4.00/4.00</p>
+                    <p><strong>Auburn University</strong> | Fall 2020 - August 2025 (Expected) | GPA: 4.00/4.00</p>
                 </div>
                 <div class="education-item">
                     <h3>MS in Aerospace Engineering</h3>
@@ -286,23 +286,14 @@
                     <p><strong>National Institute of Technology, Calicut</strong> | 2015 - 2019 | GPA: 8.12/10.00</p>
                 </div>
             </div>
-            <div id="experience-content" class="tab-content">
-                <h2>Experience</h2>
+            <div id="industry-experience-content" class="tab-content">
+                <h2>Industry Experience</h2>
                 <div class="experience-item">
                     <h3>Robotics and Simulation Intern</h3>
                     <p><strong>Detect Technologies</strong> | Chennai, India | March 2020 - July 2020</p>
                     <ul>
                         <li>Developed a high-fidelity simulation environment in Gazebo using CAD models of a custom hexacopter and integrated it with PX4 flight control firmware.</li>
                         <li>Designed a realistic virtual industrial setting featuring oil tanks for pilot training in inspection routines.</li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-                    <h3>Real-Time Collision-Free Trajectory Optimization for Quadcopters</h3>
-                    <p><strong>Auburn University</strong> | Auburn, AL | March 2023 - Present</p>
-                    <ul>
-                        <li>Developed an object detection and localization (ODL) algorithm using YOLO ROS wrapper and ZED/Realsense stereo camera.</li>
-                        <li>Designed neural network models for trajectory prediction and implemented a correction algorithm for collision-free trajectories.</li>
-                        <li>Currently integrating and testing the ODL and trajectory planning neural networks on a quadcopter with a Pixhawk flight controller and Jetson Nano.</li>
                     </ul>
                 </div>
             </div>
