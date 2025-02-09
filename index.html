@@ -8,44 +8,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
-
-    <!-- Hero Section with Split Video Background -->
     <section class="hero" id="home">
-        <!-- Left Video -->
-        <div class="video-container left-video">
-            <video autoplay muted loop>
-                <source src="videos/gazebo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <!-- Video Background -->
+        <video autoplay muted loop id="video-bg">
+            <source src="assets/videos/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1>Hi, I am Praveen J. Ayyanathan!</h1>
+        <p>Aerospace Engineer | Trajectory Optimization | Robotics</p>
+        <div class="social-icons">
+            <a href="https://github.com/jp-praveen" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/praveen-jawahalal-ayyanathan/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.researchgate.net/profile/Praveen-Jawaharlal-Ayyanathan?ev=hdr_xprf" target="_blank"><i class="fa-brands fa-researchgate"></i></a>
+            <a href="mailto:jp.praveen2397@gmail.com"><i class="fa-solid fa-envelope"></i></a>
         </div>
-        <!-- Right Video -->
-        <div class="video-container right-video">
-            <video autoplay muted loop>
-                <source src="videos/Cross_Over_Sync.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <!-- Centered Text -->
-        <div class="hero-content">
-            <h1>Hi, I am Praveen J. Ayyanathan!</h1>
-            <p>Aerospace Engineer | Trajectory Optimization | Robotics</p>
-            <div class="social-icons">
-                <a href="https://github.com/jp-praveen" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/praveen-jawahalal-ayyanathan/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.researchgate.net/profile/Praveen-Jawaharlal-Ayyanathan?ev=hdr_xprf" target="_blank"><i class="fa-brands fa-researchgate"></i></a>
-                <a href="mailto:jp.praveen2397@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-        </div>
+        <div class="scroll-down">Scroll down ⬇</div>
     </section>
-
-    <!-- About Section -->
     <section id="about">
         <div class="tabs">
             <button class="tab-button" onmouseover="showContent('about')">About</button>
@@ -87,8 +71,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-grid">
@@ -142,8 +124,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
         <p>Feel free to reach out to me via email or connect with me on LinkedIn!</p>
@@ -152,8 +132,6 @@
             <a href="https://www.linkedin.com/in/praveen-jawahalal-ayyanathan/" target="_blank" class="btn">LinkedIn</a>
         </div>
     </section>
-
-    <!-- Footer -->
     <footer>
         <p>&copy; 2023 Praveen J. Ayyanathan. All rights reserved.</p>
         <div class="social-icons">
