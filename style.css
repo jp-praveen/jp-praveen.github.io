@@ -43,7 +43,7 @@ nav a:hover {
     text-shadow: 0px 0px 5px rgba(255, 204, 0, 0.8);
 }
 
-/* Hero Section */
+/* Hero Section with Video Background */
 .hero {
     height: 100vh;
     display: flex;
@@ -53,12 +53,17 @@ nav a:hover {
     color: white;
     position: relative;
     overflow: hidden;
-    padding-top: 80px; /* Space for the fixed nav */
 }
 
-.hero-content {
-    text-align: center;
-    z-index: 2;
+.hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
 }
 
 .hero h1 {
@@ -75,26 +80,8 @@ nav a:hover {
     animation: fadeIn 3s ease-in-out;
 }
 
-.video-container {
-    width: 80%;
-    max-width: 800px;
-    height: 400px;
-    margin-top: 20px;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-}
-
-.video-container video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .social-icons {
     margin-top: 20px;
-    z-index: 2;
 }
 
 .social-icons a {
@@ -114,7 +101,6 @@ nav a:hover {
     bottom: 20px;
     font-size: 1.2em;
     animation: bounce 2s infinite;
-    z-index: 2;
 }
 
 /* About Section */
