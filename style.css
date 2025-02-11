@@ -53,6 +53,7 @@ nav a:hover {
     color: white;
     position: relative;
     overflow: hidden;
+    padding-top: 100px; 
 }
 
 .hero video {
