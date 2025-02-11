@@ -17,7 +17,7 @@
     <section class="hero" id="home">
         <!-- Video Background -->
         <video autoplay muted loop id="video-bg">
-            <source src="videos/Cross_Over_Sync.mp4" type="video/mp4">
+            <source src="videos/drone_animation.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <h1>Hi, I am Praveen!</h1>
@@ -140,7 +140,7 @@ My work combines advanced GNC theory with practical testing on multi-rotor UAVs 
     <div id="modal1" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal1')">&times;</span>
-            <h3>Real-Time Collision-Free Trajectory Optimization</h3>
+            <h3>Neural Network-Based Obstavle Aware Trajectory Generation for UAVs </h3>
             <img src="images/guidance_odl_algorithm.jpg" alt="Real-Time Collision-Free Trajectory Optimization">
             <p>
                  A Holybro X-500 V2 quadcopter platform equipped with a Pixhawk 6c flight controller is used for all data collection and algorithm evaluation.  A Jetson Nano acts as the companion computer, while a RealSense D435 stereo camera is used for object detection and localization (ODL). Position and orientation estimates are obtained from an OptiTrack PrimeX 22 motion capture (MOCAP) system, which provides state estimation data to the Pixhawk. For perception, YOLOv3 Tiny was employed for object detection and is integrated via a ROS wrapper. The combination of the RealSense D435 and YOLOv3 Tiny enables ODL. For guidance, a neural-network-based framework was developed to facilitate quadcopter navigation in environments with static obstacles. Trajectory generation was achieved using a successive convexification method, and three neural network (NN) models were designed to approximate and reconstruct optimal paths:
@@ -178,7 +178,7 @@ To enhance safety, a safety margin correction step was introduced, dynamically a
     <div id="modal2" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal2')">&times;</span>
-            <h3>Phase Synchronizing Controllers for Multi-Rotors</h3>
+            <h3>Speed and Phase Synchronizing Controllers for Multi-Rotors</h3>
             <img src="images/project2.jpg" alt="Phase Synchronizing Controllers for Multi-Rotors">
             <p>
                 Developed and tested a precise speed and position PID controller for multi-rotors. Extended the controller to synchronize co-rotating propellers and control blade crossover in counter-rotating propellers.
