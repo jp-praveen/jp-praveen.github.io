@@ -178,7 +178,7 @@ nav a:hover {
 .project-card img {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9; /* Set a fixed aspect ratio (e.g., 16:9) */
+    aspect-ratio: 16 / 16; /* Set a fixed aspect ratio (e.g., 16:9) */
     object-fit: cover; /* Ensures the image covers the area without distortion */
 }
 
