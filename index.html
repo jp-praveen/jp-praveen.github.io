@@ -203,12 +203,9 @@ To enhance safety, a safety margin correction step was introduced, dynamically a
         </thead>
         <tbody>
             <tr>
-                <td>Neural Network Based Collision-Free Trajectory Generator for Quadcopters</td>
-                <td><a href="https://arc.aiaa.org/doi/pdf/10.2514/6.2025-0565" target="_blank">Read Paper</a></td>
-            </tr>
-            <tr>
-                <td>Monocular 3D Pedestrian Detection and Tracking with Neural Network with Uncertainty Estimate for Safe Drone Operation</td>
-                <td><a href="https://arc.aiaa.org/doi/10.2514/6.2025-2117" target="_blank">Read Paper</a></td>
+                <td>Development and Validation of Phase Controller
+for Multi-Rotor Systems</td>
+                <td><a href="https://arc.aiaa.org/doi/10.2514/6.2024-4290" target="_blank">Read Paper</a></td>
             </tr>
         </tbody>
     </table>
@@ -237,9 +234,36 @@ To enhance safety, a safety margin correction step was introduced, dynamically a
             <h3>Uncertainty Aware Optimal Control</h3>
             <img src="images/project4.jpg" alt="Uncertainty Aware Optimal Control">
             <p>
-                Developed a robust method for reducing the sensitivity of trajectory optimization problems to parameter uncertainties with reduced computational load compared to conventional desensitization methods.
+                Nonlinear optimal control problems (OCPs) often exhibit dispersion under model uncertainties, making it crucial to generate optimal solutions that are less sensitive to these uncertainties. In this work, I propose a novel solution desensitization method, the Reduced Desensitization Formulation (RDF), by leveraging the non-uniqueness of the solution of the costate differential equations when a hybrid indirect-direct method is used. A key advantage of the RDF method is its ability to significantly reduce the number of differential equations required for generating desensitized solutions. This feature enables the efficient computation of open-loop desensitized trajectories, making the approach applicable to OCPs with a larger number of uncertain parameters. To demonstrate the effectiveness of the RDF method, I applied it to three important classes of trajectory optimization problems, all of which include uncertainty in the thrust magnitude of the propulsion system: 1) minimum-fuel low-thrust rendezvous maneuvers, 2) low-thrust orbit-raising maneuvers, and 3) minimum-fuel high-thrust rocket-landing problems. For these problems, which involve bang-bang control profiles, I analyzed the change in the number of control switches between standard and desensitized optimal solutions. The numerical results confirm that the RDF method effectively desensitizes the considered performance indices with respect to thrust magnitude. Additionally, I introduce a time-triggered desensitization mechanism by modifying the RDF method. Instead of desensitizing the entire trajectory, I selectively apply desensitization to specific segments, thereby improving the optimality of the desensitized trajectories while maintaining robustness to model uncertainties.
                 <br><br>
-                <strong>Technologies Used:</strong> MATLAB, Optimization, Control Theory.
+                <strong>Keywords:</strong> Non-Linear Optimization, Optimal Control Theory, Space Trajectory Optimization.
+<section id="publications">
+    <h2>Related Publications</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Reduced Desensitization Formulation for optimal control problems</td>
+                <td><a href="https://link.springer.com/article/10.1007/s40295-024-00435-w" target="_blank">Read Paper</a></td>
+            </tr>
+            <tr>
+                <td>Time-triggered Reduced Desensitization Formulation For Solving Optimal Control Problems</td>
+                <td><a href="https://arxiv.org/abs/2409.03884" target="_blank">Read Paper</a></td>
+            </tr>
+            <tr>
+                <td>Homogeneity-Leveraging for desensitization of trajectory optimization problems</td>
+                <td><a href="https://www.researchgate.net/publication/373044190_HOMOGENEITY-LEVERAGING_FOR_DESENSITIZATION_OF_TRAJECTORY_OPTIMIZATION_PROBLEMS" target="_blank">Read Paper</a></td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
             </p>
         </div>
     </div>
