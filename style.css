@@ -305,40 +305,38 @@ nav a:hover {
     color: var(--text-color);
 }
 
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
+.blog-list {
+    max-width: 800px;
     margin: 0 auto;
+    text-align: left;
 }
 
-.blog-card {
-    background: var(--background-color); /* Use a different background for cards */
+.blog-item {
+    margin-bottom: 30px;
     padding: 20px;
+    background: var(--background-color); /* Use a different background for items */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.blog-card:hover {
-    transform: translateY(-10px);
+.blog-item:hover {
+    transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.blog-card h3 {
+.blog-item h3 {
     color: var(--primary-color);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.blog-card p {
+.blog-item p {
     font-size: 1em;
     color: var(--text-color);
     margin-bottom: 20px;
 }
 
-.blog-link {
+.blog-button {
     display: inline-block;
     padding: 10px 20px;
     background: var(--primary-color);
@@ -348,7 +346,7 @@ nav a:hover {
     transition: background 0.3s ease;
 }
 
-.blog-link:hover {
+.blog-button:hover {
     background: var(--secondary-color);
 }
 
