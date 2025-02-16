@@ -124,7 +124,7 @@ nav a:hover {
 /* About Section */
 #about {
     padding: 100px 20px;
-    background: white;
+    background: var(--background-color);
 }
 
 .tabs {
@@ -174,7 +174,7 @@ nav a:hover {
 /* Projects Section */
 #projects {
     padding: 100px 20px;
-    background: #f0f0f0;
+    background: var(--background-color);
 }
 
 .project-grid {
