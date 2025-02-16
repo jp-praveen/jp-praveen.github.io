@@ -264,9 +264,9 @@ for Multi-Rotor Systems</td>
             <h3>State Estimation</h3>
             <img src="images/project5.jpg" alt="State Estimation">
             <p>
-                Developed Kalman and Madgwick filters for orientation estimation using MPU-9250 IMU and NEO-M8N GPS data.
+                In this project, I developed a robust system for real-time attitude and position estimation using a 9-axis IMU (MPU9250) and GPS (NEO-M8N). The IMU data (accelerometer, gyroscope, and magnetometer) was processed using a Kalman filter to estimate the orientation (roll, pitch, and yaw) of the system, while the GPS data provided latitude, longitude, and altitude for position tracking. The Kalman filter implementation included bias calibration for both the accelerometer and gyroscope to improve accuracy. Additionally, the GPS data was transformed into a local North-East-Down (NED) coordinate frame for easier interpretation and integration with other navigation systems. 
                 <br><br>
-                <strong>Technologies Used:</strong> Arduino, MATLAB, Kalman Filter, Madgwick Filter.
+                <strong>Keywords:</strong> Arduino, IMU, GPS, Kalman Filter, State Estimation.
             </p>
         </div>
     </div>
@@ -293,9 +293,12 @@ for Multi-Rotor Systems</td>
             <h3>Deep Q-Learning</h3>
             <img src="images/project7.jpg" alt="Deep Q-Learning">
             <p>
-                Developed a reinforcement learning agent using Deep Q-Networks to achieve soft landings in a lunar environment.
+                In this project, I implemented a Deep Q-Network (DQN) to solve the OpenAI Gym Lunar Lander problem, simulating a controlled rocket landing. The problem was formulated using reinforcement learning, where the lander received rewards based on soft landings and penalties for crashes. Initially, I experimented with different neural network architectures and hyperparameters, testing variations in hidden layers, learning rates, and discount factors to optimize performance. To improve training stability and efficiency, I incorporated experience replay and a target network, which significantly enhanced the learning process. Through iterative tuning, I achieved a trained model that successfully landed the spacecraft consistently between the target flags. The study highlighted the importance of hyperparameter selection in reinforcement learning and provided insights into optimizing DQN models for control applications.
                 <br><br>
-                <strong>Technologies Used:</strong> Python, PyTorch, Reinforcement Learning.
+                <strong>Keywords:</strong> Python, PyTorch, Reinforcement Learning.
+            </p>
+            <p>
+            <a href="files/dqn.pdf" target="_blank">View the project report (PDF)</a>
             </p>
         </div>
     </div>
@@ -306,9 +309,30 @@ for Multi-Rotor Systems</td>
             <h3>Robust Costate Initialization for Optimal Control Problems</h3>
             <img src="images/project8.jpg" alt="Robust Costate Initialization for Optimal Control Problems">
             <p>
-                Developed a new costate initialization method based on the Adjoint Control Transformation for low-thrust trajectory optimization, achieving faster convergence than traditional methods.
+                I apply the variational approach to optimal control theory, which transforms trajectory optimization problems into two- or multiple-point boundary-value problems involving costates (i.e., Lagrange multipliers associated with the states). Estimating the missing values of these non-intuitive costates is a crucial step in solving the resulting boundary-value problems. By leveraging the costate vector mapping theorem, I extend the Adjoint Control Transformation (ACT) method, introducing Mapped ACT (MACT), which allows for solving low-thrust trajectory optimization problems in alternative coordinate systems. Specifically, I extend ACT to modified equinoctial elements and an orbital element set based on specific angular momentum and eccentricity vectors (h-e set). To evaluate the computational efficiency and robustness of the MACT method, I compare it against the traditionally used random initialization of costates by solving interplanetary rendezvous maneuvers and an Earth-centered orbit-raising problem, with and without J₂ perturbation. Numerical results show that MACT improves the convergence rate of boundary-value problems by a factor of two to three compared to random initialization. Additionally, results indicate that the h-e set is a promising and effective choice for solving low-thrust trajectory optimization problems.
                 <br><br>
-                <strong>Technologies Used:</strong> MATLAB, Optimization, Control Theory.
+                <strong>Keywords:</strong> Space Trajectory Optimization, Optimal Control Theory, Robust Initialization, Indirect Optimization.
+<section id="publications">
+    <h2>Related Publications</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mapped Adjoint Control Transformation Method for Low-Thrust Trajectory Design</td>
+                <td><a href="https://www.sciencedirect.com/science/article/abs/pii/S0094576521006548#:~:text=The%20Adjoint%20Control%20Transformation%20(ACT)%20method%20developed%20by%20Dixon%20and,of%20more%20intuitive%20physical%20variables." target="_blank">Read Paper</a></td>
+            </tr>
+            <tr>
+                <td>Adjoint Control Transformation for Modified Equinoctial Elements: An Indirect Approach</td>
+                <td><a href="https://www.researchgate.net/publication/373044649_ADJOINT_CONTROL_TRANSFORMATION_FOR_MODIFIED_EQUINOCTIAL_ELEMENTS_AN_INDIRECT_APPROACH" target="_blank">Read Paper</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
             </p>
         </div>
     </div>
