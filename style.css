@@ -1,3 +1,19 @@
+/* Light Mode (Default) */
+:root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #004e92;
+    --secondary-color: #ffcc00;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --primary-color: #1e88e5;
+    --secondary-color: #ffb300;
+}
+
 /* General Styling */
 * {
     margin: 0;
@@ -8,13 +24,14 @@
 }
 
 body {
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
     text-align: center;
 }
 
 h1, h2, h3 {
-    color: #004e92;
+    color: var(--primary-color);
 }
 
 /* Navigation Bar */
@@ -76,7 +93,7 @@ nav a:hover {
 
 .hero p {
     font-size: 1.6em;
-    color: #004e92;
+    color: var(--secondary-color);
     font-weight: 500;
     animation: fadeIn 3s ease-in-out;
 }
@@ -144,6 +161,14 @@ nav a:hover {
 
 .tab-content.active {
     display: block;
+}
+
+/* Style the toggle button */
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
 /* Projects Section */
