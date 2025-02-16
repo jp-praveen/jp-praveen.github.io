@@ -1,6 +1,9 @@
 /* Light Mode (Default) */
 :root {
     --background-color: #ffffff;
+    --section1-bg: #f0f0f0; /* Light grey */
+    --section2-bg: #d3d3d3; /* Grey */
+    --section3-bg: #a9a9a9; /* Dark grey */
     --text-color: #333333;
     --primary-color: #004e92;
     --secondary-color: #ffcc00;
@@ -9,6 +12,9 @@
 /* Dark Mode */
 [data-theme="dark"] {
     --background-color: #121212;
+    --section1-bg: #1e1e1e; /* Dark grey */
+    --section2-bg: #2c2c2c; /* Darker grey */
+    --section3-bg: #3a3a3a; /* Even darker grey */
     --text-color: #e0e0e0;
     --primary-color: #1e88e5;
     --secondary-color: #ffb300;
@@ -71,6 +77,7 @@ nav a:hover {
     position: relative;
     overflow: hidden;
     padding-top: 100px; 
+    background-color: var(--background-color);
 }
 
 .hero video {
@@ -124,7 +131,7 @@ nav a:hover {
 /* About Section */
 #about {
     padding: 100px 20px;
-    background: var(--background-color);
+    background-color: var(--section1-bg);
 }
 
 .tabs {
@@ -167,7 +174,7 @@ nav a:hover {
 /* Projects Section */
 #projects {
     padding: 100px 20px;
-    background: var(--background-color);
+    background-color: var(--section2-bg); 
 }
 
 .project-grid {
@@ -281,7 +288,7 @@ nav a:hover {
 /* Contact Section */
 #contact {
     padding: 100px 20px;
-    background: var(--background-color);
+    background-color: var(--section3-bg);
     color: var(--text-color);
     text-align: center;
 }
