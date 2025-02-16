@@ -152,11 +152,12 @@ nav a:hover {
 .tab-content {
     display: none;
     padding: 20px;
-    background: #f0f0f0;
+    background: var(--background-color);
     border-radius: 10px;
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
+    color: var(--text-color);
 }
 
 .tab-content.active {
