@@ -96,10 +96,10 @@ nav a:hover {
     font-weight: 700;
     text-transform: uppercase;
     animation: fadeIn 2s ease-in-out;
-    background: linear-gradient(90deg, #004e92, #1e88e5);
+    background: white;
     -webkit-background-clip: text;
     background-clip: text;
-    color: white;
+    color: transparent;
     margin-bottom: 20px;    
 }
 
