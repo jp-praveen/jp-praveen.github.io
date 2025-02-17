@@ -135,25 +135,34 @@ My work combines advanced GNC theory with practical testing on multi-rotor UAVs 
     <section id="blog">
     <h2>Blog</h2>
     <p>Explore my latest articles on space exploration and interplanetary travel.</p>
-    <div class="blog-list">
-        <!-- Blog Article 1 -->
-        <div class="blog-item">
-            <h3>Planetary Waves: A Source for Climate Variability</h3>
-            <p>Exploring the role of planetary waves in Earth's climate system and their impact on weather patterns.</p>
-            <a href="https://ecency.com/science/@intel.frontier/planetary-waves-a-source-for" target="_blank" class="blog-button">Read Article</a>
+    <div class="blog-carousel">
+        <!-- Left Arrow -->
+        <button class="carousel-arrow left-arrow" onclick="prevArticle()">&#10094;</button>
+        
+        <!-- Blog Articles -->
+        <div class="blog-window">
+            <!-- Blog Article 1 -->
+            <div class="blog-item active">
+                <h3>Planetary Waves: A Source for Climate Variability</h3>
+                <p>Exploring the role of planetary waves in Earth's climate system and their impact on weather patterns.</p>
+                <a href="https://ecency.com/science/@intel.frontier/planetary-waves-a-source-for" target="_blank" class="blog-button">Read Article</a>
+            </div>
+            <!-- Blog Article 2 -->
+            <div class="blog-item">
+                <h3>Radiation Shielding for Interplanetary Travel</h3>
+                <p>Understanding the challenges of radiation exposure during interplanetary travel and potential shielding solutions.</p>
+                <a href="https://ecency.com/science/@intel.frontier/radiation-shielding-for-interplanetary-travel" target="_blank" class="blog-button">Read Article</a>
+            </div>
+            <!-- Blog Article 3 -->
+            <div class="blog-item">
+                <h3>Is Interplanetary Travel to Mars Feasible?</h3>
+                <p>Analyzing the feasibility of human missions to Mars and the technological advancements required.</p>
+                <a href="https://ecency.com/science/@intel.frontier/is-interplanetary-travel-to-mars" target="_blank" class="blog-button">Read Article</a>
+            </div>
         </div>
-        <!-- Blog Article 2 -->
-        <div class="blog-item">
-            <h3>Radiation Shielding for Interplanetary Travel</h3>
-            <p>Understanding the challenges of radiation exposure during interplanetary travel and potential shielding solutions.</p>
-            <a href="https://ecency.com/science/@intel.frontier/radiation-shielding-for-interplanetary-travel" target="_blank" class="blog-button">Read Article</a>
-        </div>
-        <!-- Blog Article 3 -->
-        <div class="blog-item">
-            <h3>Is Interplanetary Travel to Mars Feasible?</h3>
-            <p>Analyzing the feasibility of human missions to Mars and the technological advancements required.</p>
-            <a href="https://ecency.com/science/@intel.frontier/is-interplanetary-travel-to-mars" target="_blank" class="blog-button">Read Article</a>
-        </div>
+        
+        <!-- Right Arrow -->
+        <button class="carousel-arrow right-arrow" onclick="nextArticle()">&#10095;</button>
     </div>
     </section>
     <section id="contact">
@@ -433,5 +442,35 @@ for Multi-Rotor Systems</td>
             }
         });
     </script>
+    <script>
+    	let currentArticleIndex = 0;
+    	const articles = document.querySelectorAll('.blog-item');
+    	const blogWindow = document.querySelector('.blog-window');
+
+    	function showArticle(index) {
+        // Hide all articles
+            articles.forEach(article => article.classList.remove('active'));
+        
+        // Show the selected article
+            articles[index].classList.add('active');
+        
+        // Move the carousel window
+            blogWindow.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+        function nextArticle() {
+            currentArticleIndex = (currentArticleIndex + 1) % articles.length;
+            showArticle(currentArticleIndex);
+    }
+
+        function prevArticle() {
+            currentArticleIndex = (currentArticleIndex - 1 + articles.length) % articles.length;
+            showArticle(currentArticleIndex);
+    }
+
+    // Initialize the first article
+    showArticle(currentArticleIndex);
+    </script>
+
 </body>
 </html>

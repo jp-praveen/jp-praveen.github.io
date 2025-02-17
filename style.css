@@ -305,24 +305,27 @@ nav a:hover {
     color: var(--text-color);
 }
 
-.blog-list {
+/* Blog Carousel */
+.blog-carousel {
+    position: relative;
     max-width: 800px;
     margin: 0 auto;
-    text-align: left;
+    overflow: hidden;
+}
+
+.blog-window {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .blog-item {
-    margin-bottom: 30px;
+    min-width: 100%; /* Each article takes full width of the carousel */
     padding: 20px;
     background: var(--background-color); /* Use a different background for items */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.blog-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .blog-item h3 {
@@ -348,6 +351,33 @@ nav a:hover {
 
 .blog-button:hover {
     background: var(--secondary-color);
+}
+
+/* Carousel Arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.carousel-arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
 }
 
 /* Contact Section */
