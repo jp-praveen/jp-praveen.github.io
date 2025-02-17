@@ -76,7 +76,7 @@ nav a:hover {
     color: white;
     position: relative;
     overflow: hidden;
-    padding-top: 100px; 
+    padding-top: 60px; 
 }
 
 .hero::before {
@@ -114,7 +114,7 @@ nav a:hover {
     -webkit-background-clip: text;
     background-clip: text;
     color: #004e92; /* Fallback color */
-    margin-bottom: 20px;    
+    margin-bottom: 10px;    
     position: relative; /* Ensure the text is above the overlay */
     z-index: 1; /* Place the text above the overlay */
 }
@@ -124,7 +124,7 @@ nav a:hover {
     color: #004e92; 
     font-weight: 500;
     animation: fadeIn 3s ease-in-out;
-    margin-bottom: 4px; 
+    margin-bottom: 20px; 
     position: relative; /* Ensure the text is above the overlay */
     z-index: 1; /* Place the text above the overlay */
 }
@@ -365,7 +365,8 @@ nav a:hover {
 }
 
 .blog-button {
-    display: inline-block;
+    display: block;
+    margin: 0 auto; /* Center the button */
     padding: 10px 20px;
     background: var(--primary-color);
     color: white;
