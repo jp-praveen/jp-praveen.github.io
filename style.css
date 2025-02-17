@@ -114,7 +114,7 @@ nav a:hover {
     -webkit-background-clip: text;
     background-clip: text;
     color: #004e92; /* Fallback color */
-    margin-bottom: 20px;    
+    margin-bottom: 10px;    
     position: relative; /* Ensure the text is above the overlay */
     z-index: 1; /* Place the text above the overlay */
 }
