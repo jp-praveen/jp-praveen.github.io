@@ -377,7 +377,7 @@ nav a:hover {
 /* Blog Section */
 #blog {
     padding: 100px 20px;
-    background: var(--section3-bg); /* Use a different background color */
+    background: var(--section1-bg); /* Use a different background color */
     text-align: center;
 }
 
@@ -395,10 +395,10 @@ nav a:hover {
 /* Blog Carousel */
 .blog-carousel {
     position: relative;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     overflow: hidden;
-    height: 700px; 
+    height: 800px; 
 }
 
 .blog-window {
@@ -407,7 +407,7 @@ nav a:hover {
 }
 
 .blog-item {
-    min-width: 100%; /* Each article takes full width of the carousel */
+    min-width: 120%; /* Each article takes full width of the carousel */
     padding: 20px;
     background: var(--background-color); /* Use a different background for items */
     border-radius: 10px;
@@ -418,7 +418,7 @@ nav a:hover {
 }
 
 .blog-image {
-    width: 100%; /* Make the image fill the width of the blog item */
+    width: 120%; /* Make the image fill the width of the blog item */
     height: 500px; /* Set a fixed height for the image */
     object-fit: cover; /* Ensure the image covers the area without distortion */
     border-radius: 10px; /* Rounded corners for the image */
@@ -482,7 +482,7 @@ nav a:hover {
 /* Contact Section */
 #contact {
     padding: 100px 20px;
-    background-color: var(--section1-bg);
+    background-color: var(--section2-bg);
     color: var(--text-color);
     text-align: center;
 }
