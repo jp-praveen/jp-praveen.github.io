@@ -324,7 +324,7 @@ nav a:hover {
 }
 
 .modal-content {
-    background: white;
+    background: var(--background-color); 
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
@@ -333,11 +333,11 @@ nav a:hover {
     overflow-y: auto; /* Enable vertical scrolling */
     text-align: left;
     position: relative;
-    color: #333333;
+    color: var(--text-color); 
 }
 
 .modal-content h3 {
-    color: #004e92;
+    color: var(--primary-color);
     margin-bottom: 15px;
 }
 
@@ -357,14 +357,14 @@ nav a:hover {
     right: 10px;
     font-size: 1.5em;
     cursor: pointer;
-    color: #004e92;
+    color: var(--primary-color);
 }
 
 .paper-link {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #004e92;
+    background-color: var(--primary-color);
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -372,7 +372,7 @@ nav a:hover {
 }
 
 .paper-link:hover {
-    background-color: #003366;
+    background-color: var(--secondary-color);
 }
 
 /* Blog Section */
