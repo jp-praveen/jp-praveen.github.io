@@ -398,7 +398,7 @@ nav a:hover {
     max-width: 800px;
     margin: 0 auto;
     overflow: hidden;
-    height: 400px; 
+    height: 700px; 
 }
 
 .blog-window {
@@ -419,7 +419,7 @@ nav a:hover {
 
 .blog-image {
     width: 100%; /* Make the image fill the width of the blog item */
-    height: 300px; /* Set a fixed height for the image */
+    height: 500px; /* Set a fixed height for the image */
     object-fit: cover; /* Ensure the image covers the area without distortion */
     border-radius: 10px; /* Rounded corners for the image */
     margin-bottom: 15px; /* Add spacing below the image */
