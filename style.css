@@ -482,7 +482,7 @@ nav a:hover {
 /* Contact Section */
 #contact {
     padding: 100px 20px;
-    background-color: var(--section3-bg);
+    background-color: var(--section1-bg);
     color: var(--text-color);
     text-align: center;
 }
