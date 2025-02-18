@@ -407,7 +407,7 @@ nav a:hover {
 }
 
 .blog-item {
-    min-width: 120%; /* Each article takes full width of the carousel */
+    min-width: 100%; /* Each article takes full width of the carousel */
     padding: 20px;
     background: var(--background-color); /* Use a different background for items */
     border-radius: 10px;
