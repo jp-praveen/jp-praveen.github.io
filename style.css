@@ -237,7 +237,7 @@ nav a:hover {
 #projects h2 {
     color: var(--primary-color);
     margin-bottom: 20px;
-} /* <-- Add this missing closing brace */
+}
 
 .project-grid {
     display: grid;
@@ -254,6 +254,7 @@ nav a:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
+    cursor: pointer; /* Add pointer cursor for the entire card */
 }
 
 .project-card:hover {
@@ -288,13 +289,14 @@ nav a:hover {
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s ease;
-    cursor: pointer;
+    cursor: pointer; /* Add pointer cursor for the button */
     text-align: center; 
 }
 
 .project-card .btn:hover {
     background: var(--secondary-color);
 }
+
 /* Modal/Pop-up */
 .modal {
     display: none;
