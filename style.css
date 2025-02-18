@@ -242,7 +242,7 @@ nav a:hover {
 }
 
 .project-card {
-    background: white;
+    background: var(--background-color);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -277,7 +277,7 @@ nav a:hover {
 }
 
 .project-card .btn:hover {
-    background: #003366;
+    background: var(--secondary-color);
 }
 
 /* Modal/Pop-up */
