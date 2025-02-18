@@ -190,10 +190,27 @@ nav a:hover {
     text-align: left;
     color: var(--text-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    color: #333333;
 }
 
 .tab-content.active {
     display: block;
+}
+
+/* Education and Experience Items */
+.education-item, .experience-item {
+    margin-bottom: 20px;
+}
+
+.education-item h3, .experience-item h3 {
+    color: #004e92; /* Primary color for headings */
+    margin-bottom: 10px;
+}
+
+.education-item p, .experience-item p {
+    color: #333333; /* Black or dark text color for contrast */
+    font-size: 1em;
+    line-height: 1.6;
 }
 
 /* Projects Section */
