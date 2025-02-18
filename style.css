@@ -333,6 +333,7 @@ nav a:hover {
     overflow-y: auto; /* Enable vertical scrolling */
     text-align: left;
     position: relative;
+    color: #333333;
 }
 
 .modal-content h3 {
