@@ -213,6 +213,20 @@ nav a:hover {
     line-height: 1.6;
 }
 
+/* Dark Mode Override for About Section */
+[data-theme="dark"] .tab-content {
+    background: #2c2c2c; /* Dark grey background for the box */
+    color: #e0e0e0; /* Light text color for contrast */
+}
+
+[data-theme="dark"] .education-item h3, [data-theme="dark"] .experience-item h3 {
+    color: #1e88e5; /* Light blue for headings in dark mode */
+}
+
+[data-theme="dark"] .education-item p, [data-theme="dark"] .experience-item p {
+    color: #e0e0e0; /* Light text color for contrast */
+}
+
 /* Projects Section */
 #projects {
     padding: 100px 20px;
