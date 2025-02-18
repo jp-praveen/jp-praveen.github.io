@@ -395,7 +395,7 @@ nav a:hover {
 /* Blog Carousel */
 .blog-carousel {
     position: relative;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     overflow: hidden;
     height: 800px; 
@@ -418,7 +418,7 @@ nav a:hover {
 }
 
 .blog-image {
-    width: 120%; /* Make the image fill the width of the blog item */
+    width: 100%; /* Make the image fill the width of the blog item */
     height: 500px; /* Set a fixed height for the image */
     object-fit: cover; /* Ensure the image covers the area without distortion */
     border-radius: 10px; /* Rounded corners for the image */
