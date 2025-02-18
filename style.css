@@ -382,7 +382,7 @@ nav a:hover {
 }
 
 #blog h2 {
-    color: var(--primary-color);
+    color: white;
     margin-bottom: 20px;
 }
 
@@ -478,7 +478,7 @@ nav a:hover {
 }
 
 #contact h2 {
-    color: var(--primary-color);
+    color: white;
     margin-bottom: 20px;
 }
 
