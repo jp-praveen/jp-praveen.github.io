@@ -187,24 +187,29 @@ I am actively seeking full-time opportunities in GNC, trajectory optimization, a
             <img src="images/guidance_odl_algorithm.jpg" alt="Real-Time Collision-Free Trajectory Optimization">
             <p>
                  I developed a neural-network-based framework for collision-free trajectory generation for quadcopters operating in static environments. A Holybro X-500 V2 quadcopter equipped with a Pixhawk 6C flight controller, Jetson Nano, and RealSense D435 stereo camera was used for real time implementation. YOLOv3 Tiny (integrated via a ROS wrapper) and the stereocamera were used to perform object detection and localization (ODL). Using optimal trajectories obtained using successive convex optimization, I trained three neural networks—NN-Trajectory, NN-Parameter, and NN-Segment—to approximate and reconstruct optimal paths, with Optuna used for hyperparameter tuning and architecture optimization. To enhance safety, I introduced a safety margin correction step to dynamically adjust position-level information near obstacles, ensuring collision-free trajectories with minimal accuracy loss. Additionally, I developed a monocular camera-based human localization algorithm that accurately estimates relative position, velocity, and associated uncertainty without relying on computationally expensive depth estimation methods, making it ideal for embedded and resource-constrained platforms. Experimental results demonstrate the effectiveness of the framework in multiple scenarios, with position estimates comparable to existing methods and velocity estimates capturing overall trends, though further improvements are needed for accuracy.
-                <section id="publications">
-    <h2>Related Publications</h2>
+                <section id="github">
+    <h2>Github</h2>
     <table>
         <thead>
             <tr>
-                <th>Title</th>
+                <th>Repository</th>
                 <th>Link</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Neural Network Based Collision-Free Trajectory Generator for Quadcopters</td>
-                <td><a href="https://arc.aiaa.org/doi/pdf/10.2514/6.2025-0565" target="_blank">Read Paper</a></td>
+                <td>Autonomous_UAV_GNC</td>
+                <td><a href="https://github.com/jp-praveen/Autonomous_UAV_GNC?tab=readme-ov-file" target="_blank">Link</a></td>
             </tr>
             <tr>
-                <td>Monocular 3D Pedestrian Detection and Tracking with Neural Network with Uncertainty Estimate for Safe Drone Operation</td>
-                <td><a href="https://arc.aiaa.org/doi/10.2514/6.2025-2117" target="_blank">Read Paper</a></td>
+                <td>Neural_Network_Trajectory_Generator</td>
+                <td><a href="https://github.com/jp-praveen/Neural_Network_Trajectory_Generator" target="_blank">Link</a></td>
             </tr>
+            <tr>
+                <td>Obstacle_Avoidance_Convex_Optimization</td>
+                <td><a href="https://github.com/jp-praveen/Obstacle_Avoidance_Convex_Optimization" target="_blank">Link</a></td>
+            </tr>
+
         </tbody>
     </table>
 </section>
