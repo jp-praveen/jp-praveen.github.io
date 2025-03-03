@@ -183,7 +183,7 @@ I am actively seeking full-time opportunities in GNC, trajectory optimization, a
     <div id="modal1" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal1')">&times;</span>
-            <h3>Neural Network-Based Obstavle Aware Trajectory Generation for UAVs </h3>
+            <h3>Neural Network Based Obstavle Aware Trajectory Generation for UAVs </h3>
             <img src="images/guidance_odl_algorithm.jpg" alt="Real-Time Collision-Free Trajectory Optimization">
             <p>
                  I developed a neural-network-based framework for collision-free trajectory generation for quadcopters operating in static environments. A Holybro X-500 V2 quadcopter equipped with a Pixhawk 6C flight controller, Jetson Nano, and RealSense D435 stereo camera was used for real time implementation. YOLOv3 Tiny (integrated via a ROS wrapper) and the stereocamera were used to perform object detection and localization (ODL). Using optimal trajectories obtained using successive convex optimization, I trained three neural networks—NN-Trajectory, NN-Parameter, and NN-Segment—to approximate and reconstruct optimal paths, with Optuna used for hyperparameter tuning and architecture optimization. To enhance safety, I introduced a safety margin correction step to dynamically adjust position-level information near obstacles, ensuring collision-free trajectories with minimal accuracy loss. Additionally, I developed a monocular camera-based human localization algorithm that accurately estimates relative position, velocity, and associated uncertainty without relying on computationally expensive depth estimation methods, making it ideal for embedded and resource-constrained platforms. Experimental results demonstrate the effectiveness of the framework in multiple scenarios, with position estimates comparable to existing methods and velocity estimates capturing overall trends, though further improvements are needed for accuracy.
@@ -389,7 +389,7 @@ for Multi-Rotor Systems</td>
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal9')">&times;</span>
             <h3>Development of Multi Rotor Simulation Environments in Gazebo </h3>
-            <img src="images/gazebo_sim.jpg" alt="Gazebo">
+            <img src="images/gazebo_px4.jpg" alt="Gazebo">
             <p>
                 During this internship, I developed a hexacopter simulation model in Gazebo and integrated it with PX4 for realistic flight dynamics and control testing. The project involved designing an SDF model representing a hexacopter with accurate inertia, mass distribution, and motor configurations. I defined collision and physical properties to ensure accurate physics simulation. For integration with PX4, I configured motor mappings and joint definitions to ensure the hexacopter’s simulated actuators responded correctly to PX4 commands. I then tuned inertial properties and control parameters for stable flight and conducted test flights in Gazebo to improve stability and maneuverability. Additionally, I developed a Gazebo world featuring oil tanks and industrial structures to provide pilots with a realistic training environment for navigation and inspection tasks, adjusting environmental physics such as wind and lighting conditions to simulate real-world scenarios. 
                 <br><br>
