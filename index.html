@@ -37,8 +37,8 @@
             <div id="about-content" class="tab-content active">
                 <h2>About Me</h2>
                 <p>
-                    <strong>I am a Ph.D. candidate in Aerospace Engineering at Auburn University (graduating in July 2025), specializing in guidance, navigation, and control (GNC) strategies for autonomous systems. My research focuses on robust trajectory optimization, onboard obstacle detection and avoidance, and controller development, combining deep learning, optimization techniques, and high-fidelity simulations. I have extensive experience in theoretical, computational, and experimental research. Beyond academia, I completed a four-month internship as a robotics and simulation intern, where I worked on high-fidelity drone simulations for industrial inspection applications. I am proficient in Python, MATLAB, C++, ROS, LabVIEW, and Simulink, with hands-on experience using Jetson Nano, Raspberry Pi, Arduino, NI Data Acquisition Systems, flight controllers, stereocamera, IMUs and high speed imaging. <br><br>
-I am actively seeking full-time opportunities in GNC for robotic systems. </strong>
+                    <strong>I am a Ph.D. candidate in Aerospace Engineering at Auburn University (graduating in July 2025), specializing in guidance, navigation, and control (GNC) strategies for autonomous systems. My research focuses on robust motion planning, onboard obstacle detection and localization, and controller development, combining deep learning, optimization techniques, and high-fidelity simulations. Beyond academia, I completed a four-month internship as a robotics and simulation intern, where I worked on high-fidelity drone simulations for industrial inspection applications. I am proficient in Python, MATLAB, C++, ROS, LabVIEW, and Simulink, with hands-on experience using Jetson Nano, Raspberry Pi, Arduino, NI Data Acquisition Systems, flight controllers, stereocamera, IMUs and high speed imaging. <br><br>
+I am actively seeking full-time opportunities in GNC for autonomous systems. </strong>
 
  <br><br>
                 </p>
@@ -72,25 +72,26 @@ I am actively seeking full-time opportunities in GNC for robotic systems. </stro
         <div class="project-grid">
             <!-- Project 1 -->
             <div class="project-card">
-                <h3>Neural Network-Based Obstacle Aware Trajectory Generation for UAVs</h3>
+                <h3>Simulation and Experimental Validation of a Neural
+ Network Based Path and Trajectory Planner</h3>
                 <img src="images/drone_animation.png" alt="Real-Time Collision-Free Trajectory Optimization">
                 <button class="btn" onclick="openModal('modal1')">View Project</button>
             </div>
             <!-- Project 2 -->
             <div class="project-card">
-                <h3>Speed and Phase Synchronizing Controllers for Multi-Rotors</h3>
+                <h3>Speed and Phase Synchronizing Controller Development</h3>
                 <img src="images/rotorcraft.png" alt="Phase Synchronizing Controllers for Multi-Rotors">
                 <button class="btn" onclick="openModal('modal2')">View Project</button>
             </div>
             <!-- Project 6 -->
             <div class="project-card">
-                <h3>Trajectory Generation and Control of Quadcopters with Time Allocation</h3>
+                <h3>Trajectory Planning and Control Development for Quadcopters</h3>
                 <img src="images/snap1.png" alt="Minimum Snap Trajectory Generator with Time Allocation">
                 <button class="btn" onclick="openModal('modal6')">View Project</button>
             </div>
             <!-- Project 4 -->
             <div class="project-card">
-                <h3>Uncertainty Aware Desensitized Optimal Control Formulation</h3>
+                <h3>Uncertainty Aware Trajectory Planning</h3>
                 <img src="images/lander_traj.jpg" alt="Uncertainty Aware Optimal Control">
                 <button class="btn" onclick="openModal('modal4')">View Project</button>
             </div>
@@ -121,7 +122,7 @@ I am actively seeking full-time opportunities in GNC for robotic systems. </stro
             </div>
             <!-- Project 8 -->
             <div class="project-card">
-                <h3>Robust Costate Initialization for Optimal Control Problems</h3>
+                <h3>Initialization for Indirect Trajectory Optimization Methods</h3>
                 <img src="images/mact1.png" alt="Robust Costate Initialization for Optimal Control Problems">
                 <button class="btn" onclick="openModal('modal8')">View Project</button>
             </div>
@@ -186,7 +187,26 @@ I am actively seeking full-time opportunities in GNC for robotic systems. </stro
             <h3>Neural Network Based Obstavle Aware Trajectory Generation for UAVs </h3>
             <img src="images/guidance_odl_algorithm.jpg" alt="Real-Time Collision-Free Trajectory Optimization">
             <p>
-                 I developed a neural-network-based framework for collision-free trajectory generation for quadcopters operating in static environments. A Holybro X-500 V2 quadcopter equipped with a Pixhawk 6C flight controller, Jetson Nano, and RealSense D435 stereo camera was used for real time implementation. YOLOv3 Tiny (integrated via a ROS wrapper) and the stereocamera were used to perform object detection and localization (ODL). Using optimal trajectories obtained using successive convex optimization, I trained three neural networks—NN-Trajectory, NN-Parameter, and NN-Segment—to approximate and reconstruct optimal paths, with Optuna used for hyperparameter tuning and architecture optimization. To enhance safety, I introduced a safety margin correction step to dynamically adjust position-level information near obstacles, ensuring collision-free trajectories with minimal accuracy loss. Additionally, I developed a monocular camera-based human localization algorithm that accurately estimates relative position, velocity, and associated uncertainty without relying on computationally expensive depth estimation methods, making it ideal for embedded and resource-constrained platforms. Experimental results demonstrate the effectiveness of the framework in multiple scenarios, with position estimates comparable to existing methods and velocity estimates capturing overall trends, though further improvements are needed for accuracy.
+            I developed a real-time, neural network-based motion planning framework to enable collision-free navigation in obstacle-dense environments. The framework is platform-agnostic and applicable to both aerial and ground-based autonomous systems. I implemented and validated the system on a quadcopter equipped with a Jetson Nano, Pixhawk 6C flight controller, and Intel RealSense D435 stereo camera.
+        </p>
+        <p>
+            The guidance module combines deep learning with optimization-based trajectory generation. I trained three neural network models using convex-optimized trajectories:
+            <ul>
+                <li><strong>NN-Parameter (NN-P):</strong> Predicts obstacle-aware waypoints with time and velocity information.</li>
+                <li><strong>NN-Segment (NN-S):</strong> Generates B-spline-based segment trajectories between waypoints.</li>
+                <li><strong>NN-Trajectory (NN-T):</strong> Predicts full trajectory coefficients directly.</li>
+            </ul>
+            The system was trained using trajectories from successive convex programming and optimized using Optuna.
+        </p>
+        <p>
+            For perception, I integrated YOLOv3-Tiny with a stereo camera using ROS to build an onboard object detection and localization (ODL) pipeline. Obstacles were detected in real time and localized in 3D without requiring prior mapping.
+        </p>
+        <p>
+            In addition, I developed a monocular camera-based human localization algorithm capable of estimating relative position, velocity, and uncertainty without using depth estimation—suitable for resource-constrained platforms. 
+        </p>
+        <p>
+            Experimental flight tests confirmed the system's effectiveness in real-time obstacle avoidance and path execution, with accurate position estimates and smooth trajectory tracking. While the velocity estimation was able to capture overall trends, future improvements are planned to enhance precision.
+        </p>
     <section id="publications">
     <h2>Github and Related Publications</h2>
     <table>
