@@ -196,17 +196,13 @@ I am actively seeking full-time opportunities in GNC for autonomous systems. </s
                 <li><strong>NN-Segment (NN-S):</strong> Generates B-spline-based segment trajectories between waypoints.</li>
                 <li><strong>NN-Trajectory (NN-T):</strong> Predicts full trajectory coefficients directly.</li>
             </ul>
-            The system was trained using trajectories from successive convex programming and optimized using Optuna.
+            The neural network models were optimized using Optuna.
         </p>
         <p>
-            For perception, I integrated YOLOv3-Tiny with a stereo camera using ROS to build an onboard object detection and localization (ODL) pipeline. Obstacles were detected in real time and localized in 3D without requiring prior mapping.
+            For perception, I integrated YOLOv3-Tiny with a stereo camera using ROS to build an onboard object detection and localization (ODL) pipeline. Obstacles were detected in real time and localized in 3D without requiring prior mapping.  In addition, I developed a monocular camera-based human localization algorithm capable of estimating relative position, velocity, and uncertainty without using depth estimation—suitable for resource-constrained platforms. 
         </p>
         <p>
-            In addition, I developed a monocular camera-based human localization algorithm capable of estimating relative position, velocity, and uncertainty without using depth estimation—suitable for resource-constrained platforms. 
-        </p>
-        <p>
-            Experimental flight tests confirmed the system's effectiveness in real-time obstacle avoidance and path execution, with accurate position estimates and smooth trajectory tracking. While the velocity estimation was able to capture overall trends, future improvements are planned to enhance precision.
-        </p>
+            Experimental flight tests confirmed the system's effectiveness in real-time obstacle avoidance and path execution, with accurate position estimates and smooth trajectory tracking.         </p>
     <section id="publications">
     <h2>Github and Related Publications</h2>
     <table>
