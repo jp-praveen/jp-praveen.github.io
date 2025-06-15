@@ -188,7 +188,7 @@ I am actively seeking full-time opportunities in GNC for autonomous systems. </s
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal1')">&times;</span>
             <h3>Neural Network Based Obstavle Aware Trajectory Generation for UAVs </h3>
-            <img src="images/guidance_odl_algorithm.jpg" alt="Real-Time Collision-Free Trajectory Optimization">
+            <img src="images/algorithm.png" alt="Real-Time Collision-Free Trajectory Optimization">
             <p>
             I developed a real-time, neural network-based motion planning framework to enable collision-free navigation in obstacle-dense environments. The framework is platform-agnostic and applicable to both aerial and ground-based autonomous systems. I implemented and validated the system on a quadcopter equipped with a Jetson Nano, Pixhawk 6C flight controller, and Intel RealSense D435 stereo camera.
         </p>
@@ -243,6 +243,41 @@ I am actively seeking full-time opportunities in GNC for autonomous systems. </s
             </p>
         </div>
     </div>
+
+    <!-- Modal: Perception System -->
+<div id="modal-perception" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('modal-perception')">&times;</span>
+        <h3>Real-Time Perception System for Obstacle Detection and Localization</h3>
+        <img src="images/perception.png" alt="Obstacle Detection and Localization Pipeline">
+        <p>
+            I evaluated lightweight object detection models such as YOLOv3-Tiny and MobileNet-SSD based on real-time performance on the Jetson Nano platform. Using transfer learning, I trained these models on custom datasets for indoor navigation in the presence of obstacles.
+        </p>
+        <p>
+            Based on performance and speed, I selected YOLOv3-Tiny for integration into the onboard perception system. I then developed a complete object detection and localization (ODL) pipeline that fuses RGB image and depth data from an Intel RealSense D435 camera. The pipeline estimates 3D positions of obstacles by converting pixel coordinates into the world frame using calibrated intrinsic and extrinsic camera parameters.
+        </p>
+        <p>
+            The entire perception stack was implemented using the ROS framework and deployed on a Jetson Nano. The ODL system was evaluated against motion capture–based ground truth and achieved less than 10 cm localization error.
+        </p>
+        <section id="publications-perception">
+            <h2>Github and Related Publications</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Autonomous_UAV_GNC (Perception + Planning)</td>
+                        <td><a href="https://github.com/jp-praveen/Autonomous_UAV_GNC?tab=readme-ov-file" target="_blank">Github</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</div>
     <!-- Modal 2 -->
     <div id="modal2" class="modal">
         <div class="modal-content">
