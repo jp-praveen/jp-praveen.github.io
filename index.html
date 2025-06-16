@@ -93,6 +93,12 @@ I am actively seeking full-time opportunities in GNC for autonomous systems. </s
                 <img src="images/rotorcraft.png" alt="Phase Synchronizing Controllers for Multi-Rotors">
                 <button class="btn" onclick="openModal('modal2')">View Project</button>
             </div>
+	    <!-- Project 2a -->
+            <div class="project-card">
+                <h3>Vision-Based Phase Angle Estimation using High-Speed Imaging</h3>
+                <img src="images/val_block.png" alt="Vision-Based Validation Algorithm">
+                <button class="btn" onclick="openModal('modal2a')">View Project</button>
+            </div>
             <!-- Project 6 -->
             <div class="project-card">
                 <h3>Trajectory Planning and Control Development for Quadcopters</h3>
@@ -323,6 +329,28 @@ for Multi-Rotor Systems</td>
             </p>
         </div>
     </div>
+    <!-- Modal 2a -->
+<div id="modal2a" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('modal2a')">&times;</span>
+        <h3>Vision-Based Phase Angle Estimation using High-Speed Imaging</h3>
+        <img src="images/4.jpg" alt="Algorithm Overview">
+        <p>
+            I developed a vision-based technique for tracking the position of a rotating propeller using high-speed imaging. This work extended an earlier method that was limited to speed-synchronized frames by enabling continuous phase tracking over a full revolution.
+        </p>
+        <p>
+            High-frame-rate images were captured using a Phantom VEO camera. The propeller center is known, and annular masks were applied to isolate the circular path of a reflective tape affixed to the propeller. I used intensity and area thresholds to extract the reflective region and determined its centroid.
+        </p>
+        <p>
+            The phase angle was calculated for each frame using a two-point geometric formula based on the centroid and propeller center coordinates. This produced a smooth, time-continuous angular history of the propeller.
+        </p>
+        <img src="images/phase_angle.png" alt="Phase Angle Plot">
+        <p>
+            This validation framework allowed accurate measurement of propeller position using visual data and is instrumental in evaluating closed-loop speed and position controller performance.
+        </p>
+    </div>
+</div>
+
     <!-- Modal 3 -->
     <div id="modal3" class="modal">
         <div class="modal-content">
