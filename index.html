@@ -336,15 +336,8 @@ for Multi-Rotor Systems</td>
         <h3>Vision-Based Tracking for Propellers</h3>
         <img src="images/4.jpg" alt="Algorithm Overview">
         <p>
-            I developed a vision-based technique for tracking the position of a rotating propeller using high-speed imaging. This work extended an earlier method that was limited to speed-synchronized frames by enabling continuous phase tracking over a full revolution.
-        </p>
-        <p>
-            High-frame-rate images were captured using a Phantom VEO camera. The propeller center is known, and annular masks were applied to isolate the circular path of a reflective tape affixed to the propeller. I used intensity and area thresholds to extract the reflective region and determined its centroid.
-        </p>
-        <p>
-            The phase angle was calculated for each frame using a two-point geometric formula based on the centroid and propeller center coordinates. This produced a smooth, time-continuous angular history of the propeller.
-        </p>
-        <p>
+            I developed a vision-based technique for tracking the position of a rotating propeller using high-speed imaging. High-frame-rate images were captured using a Phantom VEO camera. The propeller center is known, and annular masks were applied to isolate the circular path of a reflective tape affixed to the propeller. I used intensity and area thresholds to extract the reflective region and determined its centroid. The phase angle was calculated for each frame using a two-point geometric formula based on the centroid and propeller center coordinates. This produced a smooth, time-continuous angular history of the propeller.
+         <p>
             This validation framework allowed accurate measurement of propeller position using visual data and is instrumental in evaluating closed-loop speed and position controller performance.
         </p>
     </div>
